@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VR全景</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+    .navbar-default {background-color: #1d2124;border-color:#1d2124;width:100%;z-index:999999;overflow: visible;position: fixed;top: 0px;}
+    .navbar-default .navbar-nav > li > a {color: #fff;}
+    .navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-nav > li > a:focus {color: #fff;}
+    .navbar-default .navbar-nav .dropdown .dropdown-menu> li > a{color: #fff;}
+    .navbar-default .navbar-nav .dropdown .dropdown-menu> li > a:hover,.navbar-default .navbar-nav .dropdown .dropdown-menu> li > a:focus {color:#1d2124;background-color: #fff;}
+    .navbar-default .navbar-nav > .open > a,.navbar-default .navbar-nav > .open > a:hover,.navbar-default .navbar-nav > .open > a:focus {color:#1d2124;background-color: #fff;}
+    .navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > a:focus {border-top: 2px solid #18a5ef;color: #18a5ef;background-color:#1d2124;}
+    #logoImg{margin-top:8px;margin-right: 30px;width: 180px}
+    #vrIframe{margin-top: 54px;}
+    .link{cursor:pointer;}
+    .footer {width:100%;background-color:#F5F5F5;font-size:0.75em;padding-top:0.75em;padding-bottom:0.75em;text-align:center;line-height:150%;color:#6C6C6C;border:2px solid #CCC;border-width:2px 0px 0px 0px;margin:0 auto;position: absolute;bottom: 0}
+    .footer1 {width:100%;background-color:#F5F5F5;font-size:0.75em;padding-top:0.75em;text-align:center;line-height:150%;color:#6C6C6C;border:2px solid #CCC;border-width:2px 0px 0px 0px;margin:0 auto;}
+    .footer2 {width:100%;background-color:#F5F5F5;font-size:0.75em;padding-bottom:0.75em;text-align:center;line-height:150%;color:#6C6C6C;border:1px solid #CCC;border-width:0px 0px 1px 0px;margin:0 auto;}
+    @media (min-width: 1405px) {
+      #logoImg{
+        margin-left:200px;
+      }
+      #nav{
+        margin-left: 100px;
+      }
+      .navbar-default .navbar-nav > li > a {font-size: 18px;}
+    }
+    @media screen and (min-width: 1150px) and (max-width: 1405px) {
+      .navbar-default .navbar-nav > li > a {font-size: 15px;}
+    }
+    @media (min-width: 1150px) {
+      .navbar-default .navbar-nav > li {margin-right: 30px;}
+    }
+    @media (max-width: 768px) {
+      .footer{
+        display: none;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="images/logo.png" id="logoImg">
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav" id="nav">
+            <li><a class="link">首页</a></li>
+            <li><a class="link">公司业务</a></li>
+            <li class="active"><a class="link">全景展示</a></li>
+            <li><a class="link">关于我们</a></li>
+            <li><a class="link">新闻资讯</a></li>
+            <!-- <li><a href="javascript:void(0)">新闻资讯</a></li> -->
+            <li><a class="link">联系我们</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right" id="navRight">
+            <li><a href="http://passport.91city.com/"><span class="glyphicon glyphicon-user"></span>登陆</a></li>
+            <li><a href="http://passport.91city.com/reg.html"><span class="glyphicon glyphicon-edit"></span>注册</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <iframe frameborder="0" src="http://www.expoon.com/24405" width="100%" scrolling="yes" onload="setIframeHeight(this)" id="vrIframe">
+
+    </iframe>
+    <div class="footer"><a href="http://h.91city.com" target="_blank"><nobr>华旅网络</nobr></a> | <a href="http://www.witter.cc" target="_blank"><nobr>微特数字</nobr></a> | <a href="http://b.91city.com" target="_blank"><nobr>百城传媒</nobr></a> | <a href="http://www.91city.com" target="_blank"><nobr>同城网</nobr></a> | <a href="http://daka.91city.com" target="_blank"><nobr>大咖</nobr></a> | <a href="http://hr.91city.com" target="_blank"><nobr>人才</nobr></a> | <a href="http://mall.91city.com" target="_blank"><nobr>商城</nobr></a> | <a href="http://credit.91city.com" target="_blank"><nobr>诚信</nobr></a> | <a href="http://so.91city.com" target="_blank"><nobr>搜索</nobr></a> | <a href="http://hi.91city.com" target="_blank"><nobr>网址导航</nobr></a> | <a href="http://www.huatour.cn" target="_blank"><nobr>华旅网®</nobr></a> | <a href="http://qidian.91city.com" target="_blank"><nobr>奇点</nobr></a><br>
+    关于同城网 合作伙伴 联系客服 诚聘英才 联系我们 <a href="http://91city.com/web.html" target="_blank" class="inc"><nobr>网站地图</nobr></a> <a href="http://passport.91city.com/reg_protocol.html" target="_blank" class="inc"><nobr>法律声明</nobr></a> <a href="http://www.witter.me" target="_blank"><nobr>微特我WitterMe(App)</nobr></a><br>
+    <a class="inc" href="http://www.mycity.cc" target="_blank"><nobr>吾城网™</nobr></a> <a class="inc" href="http://www.mycity.cc" target="_blank"><nobr>mycity.cc</nobr></a> <a class="inc" href="http://www.5city.top" target="_blank"><nobr>5city.top</nobr></a> <a class="inc" href="http://www.5cheng.top" target="_blank"><nobr>5cheng.top</nobr></a> <a class="inc" href="http://www.witter.cc" target="_blank"><nobr>微特Witter.cc</nobr></a> <a class="inc" href="http://www.witter.me" target="_blank"><nobr>Witter.me</nobr></a><br>
+    ©2007~2017 <a class="inc" href="http://h.91city.com" target="_blank"><nobr>华旅网络</nobr></a> <a class="inc" href="http://www.91city.com" target="_blank"><nobr>91city.com</nobr></a> <a class="inc" href="http://www.91city.com" target="_blank"><nobr>同城网</nobr></a> <a href="http://www.miitbeian.gov.cn" target="_blank" style="color:#6C6C6C"><nobr>苏ICP备12078118号</nobr></a> Alpha0.1
+    <a href="http://tongji.baidu.com/hm-web/welcome/ico?s=08b9b16807b0ea2b656b56aebbb281b9" target="_blank"><img border="0" src="http://eiv.baidu.com/hmt/icon/21.gif" width="20" height="20"></a>
+    </div>
+  </body>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+  var pmHeight=$(window).height();
+  if($(window).height()>768){
+    function setIframeHeight(iframe) {
+      if (iframe) {
+        iframe.height=pmHeight-149;
+      }
+    };
+  }
+  else {
+    function setIframeHeight(iframe) {
+      if (iframe) {
+        iframe.height=pmHeight-54;
+      }
+    };
+  }
+
+  $(function(){
+    for(var i=0;i<6;i++){
+      !function(i){
+        $(".link:eq("+i+")").on('click',function(){
+          window.location.href='index.html?top='+i+'';
+        })
+      }(i);
+    }
+  })
+  </script>
+</html>

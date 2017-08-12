@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>首页</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- <link rel="stylesheet" href="./波士科技_files/base.css" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="./波士科技_files/style.css" type="text/css"> -->
+    <style>
+    html{overflow-y:scroll; overflow-x:hidden; -webkit-text-size-adjust:none; _background-image:url(about:blank); _background-attachment:fixed;}
+    body {font-family:"Microsoft Yahei",Arial,"宋体",Helvetica; background:#fff; font-size:12px; color:#333;}
+    html,body,#index{ height:100%;}
+    .navbar-default {background-color: #1d2124;border-color: #1d2124;width:100%;z-index:999999;overflow: visible;position: fixed;top: 0px;}
+    .navbar-default .navbar-nav > li > a {color: #fff;}
+    .navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-nav > li > a:focus {color: #fff;}
+    .navbar-default .navbar-nav .dropdown .dropdown-menu> li > a{color: #fff;}
+    .navbar-default .navbar-nav .dropdown .dropdown-menu> li > a:hover,.navbar-default .navbar-nav .dropdown .dropdown-menu> li > a:focus {color:#1d2124;background-color: #fff;}
+    .navbar-default .navbar-nav > .open > a,.navbar-default .navbar-nav > .open > a:hover,.navbar-default .navbar-nav > .open > a:focus {color:#1d2124;background-color: #fff;}
+    .navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > a:focus {border-top: 2px solid #18a5ef;color: #18a5ef;background-color:#1d2124;}
+    #logoImg{margin-top:8px;margin-right: 30px;width: 180px}
+    #myCarousel{margin-top: 50px;}
+    .jiantou{font-size: 80px;margin-top: 10%}
+    .lbImg{width: 100%;}
+    @media (min-width: 1405px) {
+      #logoImg{
+        margin-left:200px;
+      }
+      #nav{
+        margin-left: 100px;
+      }
+      .navbar-default .navbar-nav > li > a {font-size: 18px;}
+    }
+    @media screen and (min-width: 1150px) and (max-width: 1405px) {
+      .navbar-default .navbar-nav > li > a {font-size: 15px;}
+    }
+    @media (min-width: 1150px) {
+      .event{height:100%; overflow:hidden; position:relative;}
+      .jiantou{
+        font-size: 100px;
+        margin-top: 17%;
+      }
+      .navbar-default .navbar-nav > li {margin-right: 30px;}
+    }
+/*公司业务页面contact.html*/
+    .tittle{
+      text-align: center;
+      font-size: 35px;
+      font-weight: bold;
+      font-family:STXihei;
+      color: #303d58;
+    }
+    .tittleX{
+      margin: 0 auto;
+      width: 100px;
+      border-bottom: 4px solid #1cba9b;
+    }
+    #yewu{
+      width: 100%;
+      padding-top: 30px;
+      position: relative;
+      background-size: 100%;
+    }
+    #yewu_1{
+      position: relative;
+      top:110px;
+    }
+    #yewu_2{
+      position: relative;
+      top:110px;
+      display: none;
+    }
+    #yewu_3{
+      position: relative;
+      top:110px;
+      left: 100%;
+      display: none;
+    }
+    #yewu_4{
+      position: relative;
+      top:110px;
+      left: 100%;
+      display: none;
+    }
+    .ywJS{
+      width:50%;
+      height:200px;
+      position:absolute;
+      left:8%;
+      padding-left:5%;
+      padding-right:5%;
+    }
+    .ywJST{
+      text-align:center;
+      font-size:25px;
+      letter-spacing:30px;
+      font-weight:bold;
+      font-family:STXihei;
+      margin-bottom:10px
+    }
+    .ywJSC{
+      text-indent:2em;
+      font-size:18px;
+      letter-spacing:5px;
+    }
+    .yewuT{
+      border-radius: 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #1cba9b;
+      width: 15%;
+      height: 46px;
+      text-align: center;
+      line-height: 46px;
+      position: absolute;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+    #yewuT_1{
+      left: 8%;
+    }
+    #yewuT_2{
+      left: 31%;
+    }
+    #yewuT_3{
+      left: 54%;
+    }
+    #yewuT_4{
+      left: 77%;
+    }
+    .yewuTU{
+      width: 35%;
+      margin-top:0;
+      margin-bottom: 20px;
+      margin-right: 8%;
+     margin-left: 59%;
+    }
+    .yewuT:hover{
+      background-color: #a8a8a8;
+    }
+    @media (min-width: 1150px) {
+      #yewu{
+        height: 100%;
+        background-image: url("images/bg2.jpg");
+      }
+      .yewuTU{
+        margin-top: 6%;
+      }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1150px) {
+      #yewu{
+        height: 500px;
+      }
+    }
+    @media (max-width: 768px) {
+      #yewu{
+        height: 600px;
+      }
+      .yewuT{
+        font-size: 12px;
+      }
+      .yewuTU{
+        margin-top: 150px;
+        width: 70%;
+        margin-left: 15%;
+      }
+      .ywJS{
+        top:-22px;
+        width:86%;
+      }
+      .tittle{
+        font-size: 25px;
+      }
+      .ywJST{
+        font-size: 22px;
+      }
+      .ywJSC{
+        font-size: 15px;
+      }
+    }
+    @media screen and (min-width: 520px) and (max-width: 768px) {
+      #yewu{
+        height: 700px;
+      }
+    }
+    @media (max-width: 520px) {
+      .jiantou{
+        margin-top: 8%;
+      }
+    }
+    /*全景展示页面*/
+    #vr{
+      width: 100%;
+      margin-top: -40px;
+      height: 100%;
+      background-size: 100%;
+    }
+    #vrT{
+      margin:0 auto;
+      width:165px;
+      font-size:40px;
+      margin-top:40px;
+      font-family:STXihei;
+      border-bottom:4px solid #1cba9b;
+    }
+    #vrY{
+      margin:0 auto;
+      width:165px;
+      font-size:22px;
+      font-family:STXihei;
+    }
+    .vr_img{
+      width: 35%;
+      margin-left:10%;
+      margin-top: 20px
+    }
+    #vr_img5{
+      position: absolute;
+      left:41%;
+      width: 18%;
+      top:250px;
+    }
+    @media (min-width: 1165px) {
+      #vr{
+        background-image: url("images/bg3.jpg");
+      }
+    }
+    @media (max-width: 1165px) {
+      #vr_imgs{
+        display: none;
+      }
+      #vr{
+        height: 500px;
+      }
+    }
+    @media (max-width: 768px) {
+      #vrT{
+        width: 120px;
+        font-size: 30px;
+      }
+      #vrY{
+        font-size: 17px;
+        padding-left: 20px;
+      }
+    }
+    /*关于我们页面*/
+    #guanyu_1{
+      width: 84%;
+      margin-left:8%;
+      margin-top: -22px;
+    }
+    #brief{
+      width: 100%;
+      margin-top: -40px;
+      height: 100%;
+      background-size: 100%;
+    }
+    #briefT{
+      margin:0 auto;
+      width:165px;
+      font-size:40px;
+      margin-top:40px;
+      font-family:STXihei;
+      border-bottom:4px solid #1cba9b;
+    }
+    #briefY{
+      margin:0 auto;
+      width:165px;
+      font-size:22px;
+      font-family:STXihei;
+    }
+    #briefC{
+      width:40%;
+      margin-top:30px;
+      margin-left:30%;
+      margin-top:40px;
+      margin-bottom:40px;
+      font-size:22px;
+      letter-spacing:2px
+    }
+    #guanyu_2{
+      width: 25%;
+    }
+    @media (max-width: 1400px) {
+      #briefC{
+        width:70%;
+        margin-left: 15%;
+      }
+    }
+    @media (min-width: 1150px) {
+      #brief{
+        background-image: url("images/bg4.jpg");
+      }
+    }
+    @media (max-width: 768px) {
+      #guanyu_1{
+        width: 100%;
+        margin-left: 0;
+      }
+      #briefT{
+        width: 120px;
+        font-size: 30px;
+      }
+      #briefY{
+        font-size: 17px;
+        padding-left: 20px;
+      }
+      #briefC{
+        font-size:14px;
+      }
+      #guanyu_2{
+        width: 45%;
+      }
+    }
+    /*新闻资讯页面*/
+    #newsInfo{
+      width: 100%;
+      margin-top: -40px;
+      height: 100%;
+      background-size: 100%;
+    }
+    #newsT{
+      margin:0 auto;
+      width:165px;
+      font-size:40px;
+      margin-top:40px;
+      font-family:STXihei;
+      border-bottom:4px solid #1cba9b;
+    }
+    #newsY{
+      margin:0 auto;
+      width:165px;
+      font-size:22px;
+      font-family:STXihei;
+    }
+    .newsBody{ position:relative; width:960px; margin:0 auto;height:100%;padding-top: 100px;}
+    .prevarr,.nextarr{ display:block; width:42px; height:54px; position:absolute; background:url(images/jt.png) no-repeat; top:76px;}
+    .prevarr{ left:-90px;}
+    .nextarr{ background-position:-42px 0; right:-90px;}
+    .prevarr:hover{ background-position:0 -54px;}
+    .nextarr:hover{ background-position:-42px -54px;}
+    #news-box{position:relative;height:350px; margin-left:-1200px;margin-left:-3000px\9;}
+    #news-con{ position:relative;width:100%; height:350px; overflow:hidden;}
+    #news-con ul{ position:absolute; left:0; top:0; width:800%; height:330px;}
+    #news-con ul li{ float:left; width:292px; height:330px;font-size:14px; line-height:22px;margin-right:42px;}
+    .width1200 #news-con ul li{margin-right:10px;}
+    #news-con li a{ display:block; color:#666; height:330px; position:relative; overflow:hidden}
+    #news-con li img{width:284px; height:200px; padding:3px; border:1px solid #c9c9c9;}
+    #news-con li span{ display:block;position:absolute; left:0; top:208px; width:100%; z-index:10; height:122px;}
+    #news-con li h4{color:#333;font-size:16px; height:16px; line-height:16px; overflow:hidden; border-bottom:1px solid #d0d8dd; padding:15px 0;text-align:center;}
+    #news-con li p{ margin:10px 0; height:44px; overflow:hidden}
+    #news-con li .bg1{ position:absolute; left:0; top:-208px; width:100%; height:208px; background:#000;filter:alpha(opacity=70);-moz-opacity:0.7;opacity:0.7;-khtml-opacity:0.7}
+    #news-con li .bg2{ width:100%;height:122px; background:#9cd2f3; position:absolute; left:0; bottom:-122px;}
+    #news-con li a:hover span{ padding:0 10px;width:272px; }
+    #news-con li a:hover span,#news-con li a:hover h4{ color:#fff}
+    #news-con li a:hover .bg1{ top:0;transition:all .3s ease; -moz-transition:all .3s ease; -webkit-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease;}
+    #news-con li a:hover .bg2{ bottom:0;transition:all .3s ease; -moz-transition:all .3s ease; -webkit-transition:all .3s ease; -o-transition:all .3s ease; -ms-transition:all .3s ease;}
+    #news code{ display:block; position:absolute; width:70px; height:70px;left:50%; margin-left:-35px; bottom:-100px;}
+    #news code a{ display:block; width:100%; height:70px; background:#0067af; border-radius:40px; text-align:center; font:normal 20px/70px Arial, Helvetica, sans-serif; color:#fff;}
+    #news code a:hover{ background:#fff; color:#0067af}
+    @media (min-width: 1500px) {
+      .newsBody{width:1350px;}
+    }
+    @media screen and (min-width: 960px) and (max-width: 1500px) {
+      .newsBody{width:960px;}
+    }
+
+    @media (min-width: 1150px) {
+      #newsInfo{
+        background-image: url("images/bg5.jpg");
+      }
+    }
+    @media (max-width: 768px) {
+      #newsInfo{
+        height: 500px;
+      }
+      #newsT{
+        width: 120px;
+        font-size: 30px;
+      }
+      #newsY{
+        font-size: 17px;
+        padding-left: 20px;
+      }
+      .newsBody{display: none}
+    }
+
+    /*联系我们页面*/
+    #contact{
+      width: 100%;
+      margin-top: -40px;
+      height: 100%;
+      background-size: 100%;
+    }
+    #contactT{
+      margin:0 auto;
+      width:165px;
+      font-size:40px;
+      font-family:STXihei;
+      border-bottom:4px solid #1cba9b;
+    }
+    #contactY{
+      margin:0 auto;
+      width:165px;
+      font-size:25px;
+      font-family:STXihei;
+      margin-bottom: 50px;
+    }
+    .contactInfo{
+      width: 70%;
+      margin-left: 15%;
+      font-size: 30px;
+      font-family:STXihei;
+      margin-bottom:80px;
+    }
+    #lianxiTu{
+      width: 25%;
+    }
+    #beihao{
+      width: 100%;
+      height: 40px;
+      background-color: #2c3038;
+      color:#696961;
+      font-size: 12px;
+      text-align: center;
+      padding-top: 12px;
+    }
+    #footer{
+      width: 100%;
+      height: 180px;
+      background-color: #31353d;
+      position: relative;
+    }
+    .footerT{
+      color:#a9a9a9;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .footerC{
+      color:#6c806f;
+      letter-spacing: 3px;
+    }
+    #footer_1{
+      top:20px;
+      left: 9%;
+    }
+    #footer_2{
+      top:20px;
+      left: 38%;
+    }
+    #footer_3{
+      top:20px;
+      left: 67%;
+    }
+    @media (min-width: 768px) {
+      .footerDiv{
+        width: 24%;
+        position: absolute;
+        text-align: center;
+      }
+    }
+    @media (max-width: 768px) {
+      #footer{
+        height: 300px;
+      }
+      #footer_1{
+        display: none;
+      }
+      .footerDiv{
+        width: 80%;
+        margin-left: 10%;
+      }
+    }
+    @media (min-width: 1500px) {
+      #contactT{
+        padding-top: 100px;
+      }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1500px) {
+      #contactT{
+        font-size: 35px;
+        width: 150px;
+        padding-top: 0px;
+      }
+      #contactY{
+        font-size: 20px;
+        padding-left: 20px;
+      }
+      .contactInfo{
+        margin-bottom: 30px;
+        font-size: 22px;
+        margin-top: -30px;
+      }
+      #lianxiTu{
+        width: 20%;
+      }
+    }
+    @media (min-width: 1150px) {
+      .contactInfo{
+        margin-left: 25%;
+      }
+      .contactInfo2{
+        position: absolute;
+        left: 30%;
+        top:150px;
+        width: 30%;
+      }
+      #contact{
+        background-image: url("images/bg6.jpg");
+      }
+      #contactT{
+        padding-top: 40px;
+      }
+      #beihao{
+        position: absolute;
+        bottom: 50px;
+      }
+      #footer{
+        position: absolute;
+        bottom: 90px;
+      }
+    }
+    @media (max-width: 768px) {
+      #contactT{
+        font-size: 30px;
+        width: 120px;
+        padding-top: 0px;
+      }
+      #contactY{
+        font-size: 21px;
+        padding-left: 20px;
+      }
+      .contactInfo{
+        margin-bottom: 40px;
+        font-size: 22px;
+      }
+      #lianxiTu{
+        width: 70%;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <div class="index" id="index">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="images/logo.png" id="logoImg">
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav" id="nav">
+            <li class="active"><a href="javascript:void(0)">首页</a></li>
+            <li><a href="javascript:void(0)">公司业务</a></li>
+            <li><a href="javascript:void(0)">全景展示</a></li>
+            <li><a href="javascript:void(0)">关于我们</a></li>
+            <li><a href="javascript:void(0)">新闻资讯</a></li>
+            <!-- <li><a href="javascript:void(0)">新闻资讯</a></li> -->
+            <li><a href="javascript:void(0)">联系我们</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right" id="navRight">
+            <li><a href="http://passport.91city.com/"><span class="glyphicon glyphicon-user"></span>登陆</a></li>
+            <li><a href="http://passport.91city.com/reg.html"><span class="glyphicon glyphicon-edit"></span>注册</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--第一屏 幻灯-->
+    <div class="event">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-wrap="true" data-pause="no">
+       <!-- 轮播（Carousel）指标 -->
+          <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <!-- 轮播（Carousel）项目 -->
+          <div class="carousel-inner">
+              <div class="item active">
+                  <img src="images/zhinengjianzhan.jpg" alt="First slide" class="lbImg">
+                  <div class="carousel-caption"></div>
+              </div>
+              <div class="item">
+                  <img src="images/vr.jpg" alt="Second slide" class="lbImg">
+                  <div class="carousel-caption"></div>
+              </div>
+              <div class="item">
+                  <img src="images/gongzhonghao.jpg" alt="Third slide" class="lbImg">
+                  <div class="carousel-caption"></div>
+              </div>
+          </div>
+          <!-- 轮播（Carousel）导航 -->
+          <a class="carousel-control left jiantou" href="#myCarousel"
+              data-slide="prev">&lsaquo;
+          </a>
+          <a class="carousel-control right jiantou" href="#myCarousel"
+              data-slide="next">&rsaquo;
+          </a>
+      </div>
+    </div>
+    <!--第二屏 公司业务-->
+    <div class="event"  >
+
+      <div id="yewu">
+        <div class="tittle">
+             <p>公司业务</p>
+             <div class="tittleX"></div>
+        </div>
+        <div class="yewuT" id="yewuT_1"><nobr>智能建站</nobr></div>
+        <div class="yewuT" id="yewuT_2"><nobr>VR全景</nobr></div>
+        <div class="yewuT" id="yewuT_3"><nobr>广告投放</nobr></div>
+        <div class="yewuT" id="yewuT_4"><nobr>智慧社区</nobr></div>
+        <div id="yewu_1">
+          <div class="ywJS">
+            <div class="ywJST">智能建站</div>
+            <div class="ywJSC">智能建站发发发顺丰发生分智能建站发发发顺丰发生分智能建站发发发顺丰发生分
+              智能建站发发发顺丰发生分智能建站发发发顺丰发生分</div>
+          </div>
+          <div><img src="images/yewu_1.png" class="yewuTU"></div>
+        </div>
+        <div id="yewu_2">
+          <div class="ywJS">
+            <div class="ywJST">VR全景</div>
+            <div class="ywJSC">智能建站发发发顺丰发生分智能建站发发发顺丰发生分智能建站发发发顺丰发生分
+              智能建站发发发顺丰发生分智能建站发发发顺丰发生分</div>
+          </div>
+          <div><img src="images/yewu_2.png" class="yewuTU"></div>
+        </div>
+        <div id="yewu_3">
+          <div class="ywJS">
+            <div class="ywJST">广告投放</div>
+            <div class="ywJSC">智能建站发发发顺丰发生分智能建站发发发顺丰发生分智能建站发发发顺丰发生分
+              智能建站发发发顺丰发生分智能建站发发发顺丰发生分</div>
+          </div>
+          <div><img src="images/yewu_3.png" class="yewuTU"></div>
+        </div>
+        <div id="yewu_4">
+          <div class="ywJS">
+            <div class="ywJST">智慧社区</div>
+            <div class="ywJSC">智能建站发发发顺丰发生分智能建站发发发顺丰发生分智能建站发发发顺丰发生分
+              智能建站发发发顺丰发生分智能建站发发发顺丰发生分</div>
+          </div>
+          <div><img src="images/yewu_4.png" class="yewuTU"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--第三屏 全景展示-->
+    <div class="event" >
+      <div id="vr">
+        <div id="vrT">全景展示</div>
+        <div id="vrY">whole&nbsp; picture</div>
+        <div id="vr_imgs">
+        <img src="images/01.jpg" id="vr_img1" class="vr_img"/>
+        <img src="images/02.jpg" id="vr_img2" class="vr_img"/>
+        <img src="images/03.jpg" id="vr_img3" class="vr_img"/>
+        <img src="images/04.jpg" id="vr_img4" class="vr_img"/>
+        <a target="_blank" href="vr.html"><img src="images/link.png" id="vr_img5"/></a>
+        </div>
+      </div>
+    </div>
+
+    <!--第四屏 公司简介-->
+    <div class="event">
+      <div id="brief">
+        <div id="briefT">公司简介</div>
+        <div id="briefY">company&nbsp; brief</div>
+        <div style="text-align: center;"><img src="images/guanyu_2.png" id="guanyu_2"></div>
+        <div>
+          <div id="briefC">
+            华旅网络科技有限公司华旅网络科技有限公司华旅网络科技科技有科科技有限公司华旅网络科技有限公旅网络科技有限公司华旅网络科技有限公司华旅网络科技有限公司华旅网络科技有限公司华旅网络科技有限公司
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <!--第五屏 合作案例-->
+    <!-- <div class="event" style="background-color:cyan">
+
+    </div> -->
+
+    <!--第六屏 新闻资讯-->
+    <div class="event">
+      <div id="newsInfo">
+        <div id="newsT">新闻资讯</div>
+        <div id="newsY">news&nbsp;information</div>
+
+        <div class="newsBody">
+        <div id="news-box" class="opacity" style="opacity: 1; margin-left: 0px;">
+            <a href="javascript:void(0)" class="prevarr" id="prevarr3"></a>
+            <a href="javascript:void(0)" class="nextarr" id="nextarr3"></a>
+            <div id="news-con">
+                <ul>
+                    <li><a href="http://www.bosskj.com/html/company/116.html" target="_blank"><img alt="热烈祝贺微易客受邀参加2016年腾讯微信支付合作伙伴大会" src="./波士科技_files/thumb_284_200_20160427112233571.png"><span><h4>热烈祝贺微易客受邀参加2016年腾讯</h4><p>2016年04月21号，腾讯微信支付在广州隆重举办本年度合作伙伴大会，并邀请全国合作伙伴参加此次大会。......</p></span><div class="bg1"><cite></cite></div><div class="bg2"></div></a></li>
+
+
+                    <li><a href="http://www.bosskj.com/html/company/115.html" target="_blank"><img alt="微易客全新推出“智能推送”打造微信支付营销新玩法！" src="./波士科技_files/thumb_284_200_20160418103756853.png"><span><h4>微易客全新推出“智能推送”打造微</h4><p>曾经传统的银行卡刷卡消费改变了消费者使用现金的习惯，而当下微信支付的普及使用户正在逐渐改变消费......</p></span><div class="bg1"><cite></cite></div><div class="bg2"></div></a></li>
+
+
+                    <li><a href="http://www.bosskj.com/html/company/114.html" target="_blank"><img alt="波士科技全国服务商第35期培训课圆满落幕" src="./波士科技_files/thumb_284_200_20160411024132600.png"><span><h4>波士科技全国服务商第35期培训课圆</h4><p>    波士科技全国服务商第33期培训课于2016年04月07日上午在波士科技合肥培训基地隆重举行，并于......</p></span><div class="bg1"><cite></cite></div><div class="bg2"></div></a></li>
+
+
+                    <li><a href="http://www.bosskj.com/html/company/113.html" target="_blank"><img alt="热烈祝贺波士科技5家合作药房参与微信支付智慧药店健康日" src="./波士科技_files/thumb_284_200_20160405112820224.png"><span><h4>热烈祝贺波士科技5家合作药房参与微</h4><p>三月刚刚结束，但是优惠未完待续，出门带上手机，打开微信，吃喝玩乐，优惠享不停，但也别忘了，药房......</p></span><div class="bg1"><cite></cite></div><div class="bg2"></div></a></li>
+
+
+                    <li><a href="http://www.bosskj.com/html/company/112.html" target="_blank"><img alt="波士科技全国服务商第32期培训课在合肥隆重举行" src="./波士科技_files/thumb_284_200_20160328092805202.png"><span><h4>波士科技全国服务商第32期培训课在</h4><p>    波士科技全国服务商第32期培训大会暨微易客新功能上线发布会于2016年03月22日上午在波士科技......</p></span><div class="bg1"><cite></cite></div><div class="bg2"></div></a></li>
+
+
+                    <li><a href="http://www.bosskj.com/html/company/111.html" target="_blank"><img alt="波士科技受邀参加微信上海站开发者课程培训" src="./波士科技_files/thumb_284_200_20160328090524535.png"><span><h4>波士科技受邀参加微信上海站开发者</h4><p>  为了更好的了解如何实现跨境微信支付以及与微信支付合作等问题，微信商学院与微信支付商户通于3......</p></span><div class="bg1"><cite></cite></div><div class="bg2"></div></a></li>
+
+
+                    <li><a href="http://www.bosskj.com/html/company/110.html" target="_blank"><img alt="波士科技受邀参加腾讯2016微信公开课PRO版" src="./波士科技_files/thumb_284_200_20160119044937856.png"><span><h4>波士科技受邀参加腾讯2016微信公开</h4><p>不管你是70后、80后还是90后,这几天，相信我们之间是没有代沟的,因为,所有人的朋友圈都是这样的：</p></span><div class="bg1"><cite></cite></div><div class="bg2"></div></a></li>
+
+                </ul>
+           </div>
+       </div>
+       <div style="text-align:center"><button type="button" class="btn btn-info btn-lg">了解更多</button></div>
+      </div>
+    </div>
+    </div>
+
+    <!--第七屏 联系我们-->
+    <div class="event">
+      <div id="contact">
+        <div id="contactT">联系我们</div>
+        <div id="contactY">contact&nbsp;&nbsp;&nbsp; us</div>
+        <div class="contactInfo">
+          营业时间：8：30-17：30<br/>
+          周一至周六<br/>
+          休息日：周日
+        </div>
+        <div class="contactInfo"><img src="images/tubiao.png" id="lianxiTu"></div>
+        <div class="contactInfo  contactInfo2">
+          电话号码<span class="glyphicon glyphicon-earphone"></span>0527-8859966<br/>
+          邮箱账号<span class="glyphicon glyphicon-envelope"></span>c@91city.com<br/>
+          公司地址<span class="glyphicon glyphicon-map-marker"></span>宿迁市宿城区运河南路60号项里社区创业中心<br/>
+          微信：
+        </div>
+        <div id="footer">
+           <div id="footer_1" class="footerDiv">
+             <p class="footerT">关于我们</p>
+             <p class="footerC">华旅网络是一家致力于软件开发、网络设计的互联网公司...</p>
+           </div>
+           <div id="footer_2" class="footerDiv">
+             <p class="footerT">我们的服务</p>
+             <p class="footerC">智能建站</p>
+             <p class="footerC">大数据精准广告投放</p>
+             <p class="footerC">VR全景</p>
+             <p class="footerC">吾城智慧社区</p>
+           </div>
+           <div id="footer_3" class="footerDiv">
+             <p class="footerT">联系方式</p>
+             <p class="footerC"><span class="glyphicon glyphicon-earphone"></span>0527-88859966</p>
+             <p class="footerC"><span class="glyphicon glyphicon-envelope"></span>c@91city.com</p>
+             <p class="footerC"><span class="glyphicon glyphicon-map-marker"></span>宿迁市宿城区运河南路60号项里社区创业中心</p>
+           </div>
+        </div>
+        <div id="beihao">
+            <p>©2017 华旅网络 版权所有 苏ICP备12078118号</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="./波士科技_files/slide1.js" type="text/javascript"></script>
+    <!-- <script type="text/javascript" src="./波士科技_files/index.js"></script> -->
+    <script>
+    $(function(){
+      if($(window).width()>1150){
+      var imgHeight=$(window).height()-50;
+      //console.log(imgHeight);
+      $(".lbImg").css("height",imgHeight+"px");
+      }
+      $("#yewuT_1").click(function(){
+        $("#yewu_1").show();
+        $("#yewu_1").css('left','100%');
+        $("#yewu_1").animate({left:'0'});
+        $("#yewu_2").css('left','100%');
+        $("#yewu_2").hide();
+        $("#yewu_3").css('left','100%');
+        $("#yewu_3").hide();
+        $("#yewu_4").css('left','100%');
+        $("#yewu_4").hide();
+      });
+      $("#yewuT_2").click(function(){
+        $("#yewu_1").css('left','100%');
+        $("#yewu_1").hide();
+        $("#yewu_2").css('left','100%');
+        $("#yewu_2").show();
+        $("#yewu_2").animate({left:'0'});
+        $("#yewu_3").css('left','100%');
+        $("#yewu_3").hide();
+        $("#yewu_4").css('left','100%');
+        $("#yewu_4").hide();
+      });
+      $("#yewuT_3").click(function(){
+        $("#yewu_1").css('left','100%');
+        $("#yewu_1").hide();
+        $("#yewu_2").css('left','100%');
+        $("#yewu_2").hide();
+        $("#yewu_3").show();
+        $("#yewu_3").animate({left:'0'});
+        $("#yewu_4").css('left','100%');
+        $("#yewu_4").hide();
+      });
+      $("#yewuT_4").click(function(){
+        $("#yewu_1").css('left','100%');
+        $("#yewu_1").hide();
+        $("#yewu_2").css('left','100%');
+        $("#yewu_2").hide();
+        $("#yewu_3").css('left','100%');
+        $("#yewu_3").hide();
+        $("#yewu_4").show();
+        $("#yewu_4").animate({left:'0'});
+      });
+    });
+    </script>
+  </body>
+</html>
